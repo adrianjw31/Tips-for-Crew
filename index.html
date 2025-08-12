@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tips for Crew</title>
+  <meta name="description" content="Tap to tip Captain Adrian via Apple Pay, Cash App, Venmo, PayPal, or Zelle.">
+  <style>
+    :root{
+      --bg:#0a1a1f;
+      --card:#0f2a33;
+      --brand:#10b4c6; /* teal to match OneWhistle vibe */
+      --text:#ecf6f8;
+      --muted:#a6c7cd;
+      --btn:#123b46;
+      --btn-hover:#15505e;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#071419, var(--bg));color:var(--text);font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+    .wrap{max-width:720px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;gap:12px;margin:12px 0 20px}
+    .logo{
+      width:46px;height:46px;border-radius:12px;
+      background: radial-gradient(85% 85% at 30% 30%, #17d0e3, #0a6e7a 70%, #083844);
+      display:grid;place-items:center; box-shadow:0 8px 22px rgba(0,0,0,.35);
+    }
+    .logo svg{width:26px;height:26px}
+    h1{font-size:22px;line-height:1.15;margin:0}
+    .sub{color:var(--muted);font-size:14px;margin-top:4px}
+    .card{
+      background:linear-gradient(180deg, #103441, var(--card));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:20px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .grid{display:grid;gap:12px;margin-top:12px}
+    .btn{
+      display:flex;align-items:center;gap:12px;
+      background:var(--btn);border:1px solid rgba(255,255,255,.08);
+      color:var(--text);padding:16px;border-radius:14px;
+      text-decoration:none;font-weight:600;justify-content:center;
+      transition:.2s transform, .2s background;
+    }
+    .btn:hover{background:var(--btn-hover);transform:translateY(-1px)}
+    .btn svg{width:22px;height:22px;flex:0 0 auto}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:520px){ .row{grid-template-columns:1fr} }
+    .pillbar{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 2px}
+    .pill{border:1px solid rgba(255,255,255,.08);background:#0c2b34;color:var(--muted);
+      padding:8px 12px;border-radius:999px;font-size:13px}
+    .foot{color:var(--muted);font-size:12px;margin-top:16px;text-align:center}
+    .copy-wrap{display:flex;gap:8px}
+    .copy{flex:1;display:flex;align-items:center;justify-content:space-between;
+      background:#0b232a;border:1px dashed rgba(255,255,255,.12);padding:14px;border-radius:12px}
+    .copy code{color:#b8eef4;font-family:ui-monospace, SFMono-Regular, Menlo, monospace;font-size:14px}
+    .copy button{background:var(--btn);color:var(--text);border:1px solid rgba(255,255,255,.1);padding:8px 12px;border-radius:10px;cursor:pointer}
+    .brandline{display:flex;align-items:center;gap:8px;margin:6px 0 10px;color:var(--muted);font-size:13px}
+    .brandline b{color:var(--text)}
+    .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);margin:14px 0}
+    .notice{font-size:12px;color:#cfeff3;background:#0c2b34;border:1px solid rgba(255,255,255,.08);padding:10px 12px;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <!-- Simple whistle/compass mark -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="8.6" opacity=".25"/>
+          <path d="M12 6.2v3.2M12 14.6v3.2M6.2 12h3.2M14.6 12h3.2" opacity=".25"/>
+          <path d="M10.2 13.8 12 9.8l1.8 4z" fill="white"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Tips for Crew</h1>
+        <div class="sub">Thanks for riding — tap a method below</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="pillbar">
+        <span class="pill">Fast • Secure</span>
+        <span class="pill">Works on iPhone & Android</span>
+        <span class="pill">No app needed for card/Apple&nbsp;Pay links</span>
+      </div>
+
+      <!-- Amount suggestions (optional, non-functional placeholders) -->
+      <div class="brandline">Quick amounts: <b>$5</b> • <b>$10</b> • <b>$20</b> • <b>$40</b></div>
+
+      <div class="grid">
+        <!-- Apple Pay / Card via Stripe Payment Link (replace URL) -->
+        <a class="btn" href="https://buy.stripe.com/test_4gMcN5cvwh0l5ia2ytbwk00" target="_blank" rel="noopener">
+          <!-- generic card icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="5.5" width="19" height="13" rx="2.4"></rect>
+            <path d="M2.5 9h19"></path>
+          </svg>
+          Pay by Card / Apple Pay
+        </a>
+
+        <div class="row">
+          <!-- Cash App -->
+          <a class="btn" href="https://cash.app/$ADub731" target="_blank" rel="noopener" aria-label="Cash App $ADub731">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2Zm.63 5.5c1.968 0 3.37 1.082 3.37 2.69 0 1.264-.733 2.167-2.02 2.546l-.587.17-.82.22c-.71.19-1.015.417-1.015.83 0 .51.472.854 1.181.854.782 0 1.45-.27 2.144-.86l1.058 1.55c-.845.78-1.878 1.216-3.145 1.297v.812h-1.7v-.872c-1.98-.278-3.23-1.484-3.23-3.132 0-1.528.965-2.5 2.83-3.02l1.36-.37c.704-.196 1.012-.457 1.012-.863 0-.494-.458-.83-1.13-.83-.778 0-1.6.34-2.28.94l-1.09-1.54c.81-.74 1.83-1.18 3.07-1.26V7.5h1.7Z"/></svg>
+            Cash App: $ADub731
+          </a>
+
+          <!-- Venmo -->
+          <a class="btn" href="https://venmo.com/u/Adrian-Williams-65" target="_blank" rel="noopener" aria-label="Venmo Adrian-Williams-65">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h16v18H4z" opacity=".08"/><path d="M16.9 6.8c.2.4.3.9.3 1.6 0 3.3-2.9 7.5-5 10L8.2 9.8l2.1-1.2 1.2 3.5c1.1-1.6 2.2-3.6 2.2-4.9 0-.4 0-.7-.1-.9h3.3Z"/></svg>
+            Venmo: Adrian‑Williams‑65
+          </a>
+        </div>
+
+        <!-- PayPal (replace with your PayPal.me) -->
+        <a class="btn" href="https://paypal.me/YourPayPalMe" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 20.4H5.4l1.7-10.3h2.4l-.5 3.2h2.2c3 0 5.1-1.7 5.1-4.6 0-2.1-1.7-3.3-4.3-3.3H7.4L6 14.7h2.4l-.6 3.7Z"/></svg>
+          PayPal
+        </a>
+
+        <!-- Zelle copy block -->
+        <div class="copy">
+          <div>
+            <div style="font-weight:700; margin-bottom:4px;">Zelle</div>
+            <code id="zelleText">adrianjw31@gmail.com</code>
+          </div>
+          <button onclick="copyToClipboard('zelleText')">Copy</button>
+        </div>
+
+        <!-- Phone copy (last 4 digits hint added) -->
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="notice">
+        Tip page by OneWhistle • Edit the placeholders (links, Zelle email/phone) in this file, upload it to your site, then write the final URL to your NFC tag.
+      </div>
+    </div>
+
+    <div class="foot">
+      Having trouble? Try another method above or ask your crew. ⚓
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(id){
+      const el = document.getElementById(id);
+      const text = el.textContent.trim();
+      navigator.clipboard.writeText(text).then(()=>{
+        const btns = document.querySelectorAll('button');
+        const b = event.currentTarget;
+        const old = b.textContent;
+        b.textContent = 'Copied!';
+        setTimeout(()=>{ b.textContent = old; }, 1300);
+      }).catch(()=>{});
+    }
+  </script>
+</body>
+</html>
